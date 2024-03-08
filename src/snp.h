@@ -3,6 +3,7 @@
 
 #include <array>
 #include <cstring>
+#include <stdint.h>
 
 namespace snplib {
 class SNP {

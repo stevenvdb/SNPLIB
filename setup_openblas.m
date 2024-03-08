@@ -12,6 +12,11 @@ switch os
         openblas_include = ['-I"',openblas_root,'\include\"'];
         openblas_lib = ['LINKLIBS=$LINKLIBS -L"',openblas_root,'/lib" -lopenblas -lgfortran'];
         cxxoptim = 'CXXOPTIMFLAGS=$CXXOPTIMFLAGS -O3 -std=c++11 -march=native -pipe -fPIC -flto -DUSE_OPENBLAS';
+    case 'GLNXA64'
+        openblas_root = '${EBROOTOPENBLAS}';
+        openblas_include = ['-I"',openblas_root,'\include\"'];
+        openblas_lib = ['LINKLIBS=$LINKLIBS -L"',openblas_root,'/lib" -lopenblas -lgfortran'];
+        cxxoptim = 'CXXOPTIMFLAGS=$CXXOPTIMFLAGS -O3 -std=c++11 -march=native -pipe -fPIC -flto -DUSE_OPENBLAS';
     case 'MACI64'
         openblas_root = '/opt/OpenBLAS';
         openblas_include = ['-I"',openblas_root,'\include\"'];
